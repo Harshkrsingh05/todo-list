@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
+const hostname = '0.0.0.0';
 
 let items =["Buy food","Eat food"];
 let workItems=[];
@@ -44,6 +45,6 @@ app.get("/about", function(req, res){
 });
 
 
-app.listen(3000, function() {
+app.listen(3000,hostname, function() {
   console.log("server started on port 3000");
 });
